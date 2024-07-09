@@ -1,6 +1,16 @@
 "use strict";
-// cliente.ts
 Object.defineProperty(exports, "__esModule", { value: true });
+// Cria uma nova data representando o momento atual
+var data = new Date();
+// Obtém as horas, minutos e segundos, convertendo para string e garantindo dois dígitos
+var horas = data.getHours().toString().padStart(2, '0');
+var minutos = data.getMinutes().toString().padStart(2, '0');
+var segundos = data.getSeconds().toString().padStart(2, '0');
+// Combina horas, minutos e segundos no formato hh:mm:ss
+var hhmmss = [horas, minutos, segundos].join(':');
+// Adiciona padding à esquerda até que a string tenha 120 caracteres
+console.log(hhmmss.padStart(120, ' '));
+// cliente.ts
 var baseDeDados_1 = require("./baseDeDados");
 var readlineSync = require("readline-sync");
 function interagirComUsuario() {

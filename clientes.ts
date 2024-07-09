@@ -1,3 +1,20 @@
+// Cria uma nova data representando o momento atual
+const data: Date = new Date(); 
+
+// Obtém as horas, minutos e segundos, convertendo para string e garantindo dois dígitos
+const horas: string = data.getHours().toString().padStart(2, '0');
+const minutos: string = data.getMinutes().toString().padStart(2, '0');
+const segundos: string = data.getSeconds().toString().padStart(2, '0');
+
+// Combina horas, minutos e segundos no formato hh:mm:ss
+const hhmmss: string = [horas, minutos, segundos].join(':');
+
+// Adiciona padding à esquerda até que a string tenha 120 caracteres
+console.log(hhmmss.padStart(120, ' '));
+
+
+
+
 // cliente.ts
 
 import { carro } from './baseDeDados';
